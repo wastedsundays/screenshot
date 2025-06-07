@@ -92,7 +92,8 @@ const urlSlug = sanitizeUrlForFilename(url);
 
       const filename = path.join(
         outputDir,
-        `screenshot-${deviceName}-${index}__${urlSlug}.png`
+        // `screenshot-${deviceName}-${index}__${urlSlug}.png`
+        `${urlSlug}-${deviceName}-${index}.png`
       );
 
       await page.screenshot({ path: filename });
